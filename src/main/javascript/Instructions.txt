@@ -1,0 +1,8 @@
+Requirements:
+* Screen should show all people coming from back-end (currently hard-coded to show only one person)
+* We should be able to enter first name, last name and age and hit button to add a user to back-end datastore
+* Upon saving new person, list should refresh to show additional person
+* Upon saving new person, first/last/age fields should be cleared
+
+Bonus Points:
+* Write unit tests for the criteria above

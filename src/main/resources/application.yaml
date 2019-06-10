@@ -1,4 +1,0 @@
-
-repoClient:
-  ribbon:
-    listOfServers: https://api.github.com

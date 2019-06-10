@@ -9,16 +9,19 @@ import java.util.List;
 
 @CrossOrigin(origins = "http://localhost:3000")
 @RestController
+@RequestMapping("/people")
 public class PersonController {
 
     @Autowired
     private PersonService personService;
 
+    @GetMapping("/getPeople")
     public List<Person> getPeople() {
         return personService.getPeople();
     }
 
-    public Person savePerson(Person person) {
+    @PostMapping("/person")
+    public Person savePerson(@RequestBody Person person) {
         return personService.savePerson(person);
     }
 }

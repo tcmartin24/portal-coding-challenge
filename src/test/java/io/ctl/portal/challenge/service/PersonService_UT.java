@@ -13,12 +13,17 @@ public class PersonService_UT {
 
     @Test
     public void savedPersonIDIs100WhenStoreIsEmpty() {
-//        assertThat(savedPerson.getId()).isEqualTo(100);
+        Person savedPerson = service.savePerson(new Person());
+        assertThat(savedPerson.getId()).isEqualTo(100);
     }
 
     @Test
     public void savedPersonIdIs400WhenStoreHas3People() {
-//        assertThat(savedPerson.getId()).isEqualTo(400);
+        service.savePerson(new Person());
+        service.savePerson(new Person());
+        service.savePerson(new Person());
+        Person savedPerson = service.savePerson(new Person());
+        assertThat(savedPerson.getId()).isEqualTo(400);
     }
 
 }
